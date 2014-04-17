@@ -10,7 +10,7 @@ var mongoose = require('mongoose'); //mongoose for mongodb
 //CONFIGURATION
 // ===============================================================
 
-mongoose.connect('localhost:27017/nodetest2'); //connect to mongoDB
+mongoose.connect('localhost:27017/todo3'); //connect to mongoDB
 
 app.use(express.static(__dirname+'/public')); //set the static files location
 app.use(morgan('dev')); //log every request to the console
@@ -18,7 +18,7 @@ app.use(bodyParser()); //pull information from html in POST
 app.use(methodOverride()); //simulate DELETE and PUT
 
 // define model =================
-	var Todo = mongoose.model('todos', {
+	var Todo = mongoose.model('Todo', {
 		text : String
 	});
 
